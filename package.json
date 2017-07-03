@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack index.js bundle.js"
+    "build": "rimraf bundle.js && webpack index.js bundle.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "http-server": "^0.10.0",
     "webpack": "^3.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1"
   }
 }
