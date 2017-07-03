@@ -65,10 +65,21 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+let messages  = __webpack_require__(1)
 
 let app = document.getElementById('app')
-app.innerHTML = 'w00t'
+app.innerHTML = `Hi, ${messages.hi},  ${messages.event}`
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = {
+    hi: 'Hello',
+    event: 'my event'
+}
 
 /***/ })
 /******/ ]);

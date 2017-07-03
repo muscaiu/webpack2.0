@@ -1,2 +1,4 @@
+let messages  = require('./messages')
+
 let app = document.getElementById('app')
-app.innerHTML = 'w00t'
+app.innerHTML = `Hi, ${messages.hi},  ${messages.event}`
