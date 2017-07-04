@@ -1,4 +1,4 @@
 module.exports = {
     hi: 'Hello',
-    event: 'my eventsp'
+    event: 'my event'
 }
