@@ -1,19 +1,26 @@
 let path = require('path')
 let webpack = require('webpack')
 
-module.exports = {
-    entry: [
-        './src/index.js',
+const DEVELOPMENT = process.env.NODE_ENV === 'development'
+const PRODUCTION = process.env.NODE_ENV === 'production'
+
+let entry = PRODUCTION
+    ? ['./src/index.js']
+    : [
         'webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:8080',
-    ],
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
+    ]
+let plugins = PRODUCTION
+    ? []
+    : [new webpack.HotModuleReplacementPlugin()]
+
+module.exports = {
+    entry: entry,
+    plugins: plugins,
     output: {
         path: path.join(__dirname, 'dist'),
         //public url of the files
         publicPath: '/dist',
-        filename: 'bundle.js'
+        filename: 'bundle.js' 
     }
 }
