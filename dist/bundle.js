@@ -78,7 +78,7 @@ app.innerHTML = `Hi, ${messages.hi},  ${messages.event}`
 
 module.exports = {
     hi: 'Hello',
-    event: 'my event'
+    event: 'my events'
 }
 
 /***/ })
