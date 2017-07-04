@@ -17,10 +17,17 @@ let plugins = PRODUCTION
 module.exports = {
     entry: entry,
     plugins: plugins,
+    module: {
+        loaders: [{
+            test:  /\.js$/, //every js file will be transpiled with babel
+            loaders: ['babel-loader'],
+            exclude: '/node_modules'
+        }]
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         //public url of the files
         publicPath: '/dist',
-        filename: 'bundle.js' 
+        filename: 'bundle.js'
     }
 }

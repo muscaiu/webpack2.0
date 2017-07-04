@@ -1,8 +1,10 @@
-let messages  = require('./messages')
+let messages = require('./messages')
+
+let newMessage = () => (`<p>${messages.hi} - ${messages.event}</p>`)
 
 let app = document.getElementById('app')
-app.innerHTML = `Hi, ${messages.hi},  ${messages.event}`
+app.innerHTML = newMessage()
 
-if(module.hot){
-    module.hot.accept() 
+if (module.hot) {
+    module.hot.accept()
 }
