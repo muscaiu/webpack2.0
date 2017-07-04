@@ -1,0 +1,44 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add webpack-dev-server
+
+PATH: 
+  C:\Users\c_muscalu\Soft\cmder\bin;C:\Users\c_muscalu\Soft\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\c_muscalu\Soft\cmder\vendor\conemu-maximus5;C:\Users\c_muscalu\Soft\cmder\vendor\conemu-maximus5\ConEmu;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Skype\Phone\;C:\Users\c_muscalu\AppData\Roaming\npm\node_modules\nodemon\lib;C:\Program Files (x86)\Yarn\bin;C:\Users\c_muscalu\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\Users\c_muscalu\Soft\cmder\
+
+Yarn version: 
+  0.24.6
+
+Node version: 
+  6.9.4
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "webpack-tut",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "rimraf dist && webpack --watch"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "http-server": "^0.10.0",
+      "webpack": "^3.0.0"
+    },
+    "devDependencies": {
+      "rimraf": "^2.6.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\c_muscalu\Soft\Webpack\webpack-tut\node_modules\cliui\test\cliui.js'
+      at Error (native)
