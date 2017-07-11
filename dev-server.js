@@ -1,19 +1,19 @@
-let WebpackDevServer = require('webpack-dev-server')
-let webpack = require('webpack')
-let config = require('./webpack.config.js')
-let path = require('path')
+var WebpackDevServer = require('webpack-dev-server');
+var webpack = require('webpack');
+var config = require('./webpack.config.js');
 
-let compiler = webpack(config)
-let server = new WebpackDevServer(compiler, {
-    hot: true,
-    filename: config.output.filename,
-    publicPath: config.output.publicPath,
-    stats: {
-        colors: true
-    }
-    
-})
+var compiler = webpack(config);
 
-server.listen(8080, 'localhost', function(){
-    
-})
+var server = new WebpackDevServer(compiler, {
+	hot: true,
+	filename: config.output.filename,
+	publicPath: config.output.publicPath,
+	stats: {
+		colors: true
+	}
+});
+
+console.log('filename ============', config.output.filename)
+console.log('publicPath ==========', config.output.publicPath)
+
+server.listen(8080, 'localhost', function() {});
