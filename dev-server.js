@@ -13,6 +13,7 @@ var server = new WebpackDevServer(compiler, {
 	}
 });
 
+console.log('DEV SERVER LOADED ============ OK ')
 console.log('filename ============', config.output.filename)
 console.log('publicPath ==========', config.output.publicPath)
 

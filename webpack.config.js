@@ -17,6 +17,8 @@ let plugins = PRODUCTION
     ? []
     : [new webpack.HotModuleReplacementPlugin()]
 
+console.log('webpack.config.js =========== OK')
+
 module.exports = {
     entry: entry,
 
